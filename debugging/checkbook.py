@@ -6,6 +6,9 @@ class Checkbook:
         if amount < 0:
             print("Error: Cannot deposit a negative amount.")
             return
+        if not self._is_valid_amount(amount):
+            print("Error: Amount can have up to 2 decimal points.")
+            return
         self.balance += amount
         print("Deposited ${:.2f}".format(amount))
         print("Current Balance: ${:.2f}".format(self.balance))
@@ -20,6 +23,10 @@ class Checkbook:
 
     def get_balance(self):
         print("Current Balance: ${:.2f}".format(self.balance))
+
+    def _is_valid_amount(self, amount):
+        # Check if the amount has up to 2 decimal points
+        return len(str(amount).split('.')[-1]) <= 2
 
 
 def main():
