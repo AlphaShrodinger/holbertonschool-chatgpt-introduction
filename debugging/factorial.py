@@ -25,7 +25,7 @@ def main():
         sys.exit(1)
 
     f = factorial(n)
-    print("Factorial of", n, "is:", f)
+    print(f)
 
 
 if __name__ == "__main__":
