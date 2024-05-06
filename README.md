@@ -1,1 +1,1 @@
-# holbertonschool-chatgpt-introduction
+# holbertonschool-chatGPT-introduction
